@@ -13,11 +13,14 @@ struct ProjectView: View {
     @State private var isPresented = false
     
     let name: String
+    @State private var error: String = "No Error found"
+    
     @StateObject var photos: PhotosDirectory<Project>
     
     var body: some View {
         VStack {
             Text(name)
+            Text(error)
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], content: {
                 ForEach(photos.fetchedItems) { photo in
                     Image(uiImage: photo.read()!)
@@ -28,14 +31,17 @@ struct ProjectView: View {
             })
         }
         .onAppear(perform: {
-            // this loads the database, not the assets.
             photos.fetch(.sync)
         })
         .navigationBarItems(trailing: button)
         .sheet(isPresented: $isPresented, content: {
             ImagePicker() { image in
+                // we don't care too much about the tribulations of picking an image in this demo.
                 if let data = image?.pngData() {
                     try! photos.insert(data)
+                    self.error = "No Error found"
+                } else {
+                    self.error = "There is a problem with that image. Please select another."
                 }
                 isPresented = false
             }
@@ -59,7 +65,6 @@ struct ProjectView: View {
 /// or...
 
 //    photos.insert(temps: temps)
-//    try! photos.save()
 
 struct ProjectView_Previews: PreviewProvider{
     static var previews: some View {
