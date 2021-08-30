@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "Directory",
-        "repositoryURL": "https://github.com/nashysolutions/Directory.git",
-        "state": {
-          "branch": null,
-          "revision": "48fe21827b6e8e4f24c6d00662be7ecc521612b3",
-          "version": "1.0.0"
-        }
-      },
-      {
         "package": "Files",
         "repositoryURL": "https://github.com/JohnSundell/Files",
         "state": {

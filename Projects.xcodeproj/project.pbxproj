@@ -13,11 +13,11 @@
 		5042010B268780810000B39E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5042010A268780810000B39E /* Preview Assets.xcassets */; };
 		50420114268780B80000B39E /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50420113268780B80000B39E /* Project.swift */; };
 		50420117268780DF0000B39E /* Files in Frameworks */ = {isa = PBXBuildFile; productRef = 50420116268780DF0000B39E /* Files */; };
-		506E0601268872EA00CDB648 /* Directory in Frameworks */ = {isa = PBXBuildFile; productRef = 506E0600268872EA00CDB648 /* Directory */; };
 		5084EC7C268787DF004F4EF1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5084EC7B268787DF004F4EF1 /* ImagePicker.swift */; };
 		5084EC7E268787F0004F4EF1 /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5084EC7D268787F0004F4EF1 /* String+extensions.swift */; };
 		5084EC81268787F9004F4EF1 /* FolderStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5084EC7F268787F9004F4EF1 /* FolderStorage.swift */; };
 		5084EC82268787F9004F4EF1 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5084EC80268787F9004F4EF1 /* ProjectView.swift */; };
+		50C0B3E1268CA36000EAA188 /* Directory in Frameworks */ = {isa = PBXBuildFile; productRef = 50C0B3E0268CA36000EAA188 /* Directory */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +32,7 @@
 		5084EC7D268787F0004F4EF1 /* String+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+extensions.swift"; sourceTree = "<group>"; };
 		5084EC7F268787F9004F4EF1 /* FolderStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderStorage.swift; sourceTree = "<group>"; };
 		5084EC80268787F9004F4EF1 /* ProjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
+		50C0B3DF268CA34800EAA188 /* Directory */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Directory; path = ../../Directory; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				506E0601268872EA00CDB648 /* Directory in Frameworks */,
+				50C0B3E1268CA36000EAA188 /* Directory in Frameworks */,
 				50420117268780DF0000B39E /* Files in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +68,7 @@
 		50420102268780810000B39E /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				50C0B3DF268CA34800EAA188 /* Directory */,
 				50420103268780810000B39E /* ProjectsApp.swift */,
 				50420105268780810000B39E /* ContentView.swift */,
 				5084EC80268787F9004F4EF1 /* ProjectView.swift */,
@@ -114,7 +116,7 @@
 			name = Projects;
 			packageProductDependencies = (
 				50420116268780DF0000B39E /* Files */,
-				506E0600268872EA00CDB648 /* Directory */,
+				50C0B3E0268CA36000EAA188 /* Directory */,
 			);
 			productName = Projects;
 			productReference = 50420100268780810000B39E /* Projects.app */;
@@ -145,7 +147,6 @@
 			mainGroup = 504200F7268780810000B39E;
 			packageReferences = (
 				50420115268780DF0000B39E /* XCRemoteSwiftPackageReference "Files" */,
-				506E05FF268872EA00CDB648 /* XCRemoteSwiftPackageReference "Directory" */,
 			);
 			productRefGroup = 50420101268780810000B39E /* Products */;
 			projectDirPath = "";
@@ -376,14 +377,6 @@
 				minimumVersion = 4.2.0;
 			};
 		};
-		506E05FF268872EA00CDB648 /* XCRemoteSwiftPackageReference "Directory" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nashysolutions/Directory.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -392,9 +385,8 @@
 			package = 50420115268780DF0000B39E /* XCRemoteSwiftPackageReference "Files" */;
 			productName = Files;
 		};
-		506E0600268872EA00CDB648 /* Directory */ = {
+		50C0B3E0268CA36000EAA188 /* Directory */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 506E05FF268872EA00CDB648 /* XCRemoteSwiftPackageReference "Directory" */;
 			productName = Directory;
 		};
 /* End XCSwiftPackageProductDependency section */
