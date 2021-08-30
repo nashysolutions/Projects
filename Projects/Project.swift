@@ -9,6 +9,14 @@ import UIKit
 import Files
 import Directory
 
+private struct Storage {
+        
+    static func loadProjectFolder() throws -> Folder {
+        let folder = try FolderStorage.loadRootFolder()
+        return try folder.createSubfolderIfNeeded(withName: "Projects")
+    }
+}
+
 struct Project: Identifiable, Container {
     
     let id: UUID
@@ -18,20 +26,16 @@ struct Project: Identifiable, Container {
     var folderName: String {
         "Project_" + name.alphanumericsOnly
     }
-}
-
-private struct Storage {
-        
-    static func loadProjectFolder() throws -> Folder {
-        let folder = try FolderStorage.loadRootFolder()
-        return try folder.createSubfolderIfNeeded(withName: "Projects")
+    
+    static func makeParent() throws -> Folder {
+        return try Storage.loadProjectFolder()
     }
 }
 
 extension Directory where Item == Project {
     
     convenience init(isPreview: Bool = false) throws {
-        let folder = try Storage.loadProjectFolder()
+        let folder = try Project.makeParent()
         try self.init(parent: folder, fileName: "projects.json", isPreview: isPreview)
     }
 }
@@ -59,7 +63,7 @@ extension Project: Codable {
 extension Project {
     
     init(id: UUID = .init(), name: String) throws {
-        let folder = try Storage.loadProjectFolder()
+        let folder = try Project.makeParent()
         self.init(id: id, name: name, parent: folder)
     }
 }
