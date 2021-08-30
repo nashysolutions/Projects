@@ -23,6 +23,7 @@ struct ContentView: View {
                     )
                 )
             }
+            .onDelete(perform: delete)
         }
         .padding()
         .navigationTitle("Projects")
@@ -30,6 +31,12 @@ struct ContentView: View {
         .onAppear(perform: {
             store.fetch(.async(.global(qos: .userInitiated)))
         })
+    }
+    
+    func delete(at offsets: IndexSet) {
+        if let index = offsets.first {
+            try! store.delete(at: index)
+        }
     }
     
     private var button: some View {
