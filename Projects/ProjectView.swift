@@ -21,17 +21,21 @@ struct ProjectView: View {
         VStack {
             Text(name)
             Text(error)
-            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], content: {
-                ForEach(photos.fetchedItems) { photo in
-                    Image(uiImage: photo.read()!)
+            LazyVGrid(
+                columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())],
+                content: {
+                    ForEach(photos.fetchedItems) { photo in
+                        Image(
+                            uiImage: photo.read()!
+                        )
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                }
-                .padding(.vertical)
-            })
+                    }
+                    .padding(.vertical)
+                })
         }
         .onAppear(perform: {
-            photos.fetch(.sync)
+            photos.fetch()
         })
         .navigationBarItems(trailing: button)
         .sheet(isPresented: $isPresented, content: {
@@ -69,6 +73,8 @@ struct ProjectView: View {
 struct ProjectView_Previews: PreviewProvider{
     static var previews: some View {
         let project = try! Project(name: "Project 1")
-        return ProjectView(name: project.name, photos: project.photos)
+        return NavigationView {
+            ProjectView(name: project.name, photos: project.photos)
+        }
     }
 }

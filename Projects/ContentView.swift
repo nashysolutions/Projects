@@ -29,7 +29,7 @@ struct ContentView: View {
         .navigationTitle("Projects")
         .navigationBarItems(trailing: button)
         .onAppear(perform: {
-            store.fetch(.async(.global(qos: .userInitiated)))
+            store.fetch()
         })
     }
     
