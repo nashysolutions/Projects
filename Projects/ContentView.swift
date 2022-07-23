@@ -49,8 +49,8 @@ struct ContentView: View {
     
     private func addProject() {
         do {
-            let project = try Project(name: "Project " + UUID().uuidString)
-            try! store.append(project)
+            let project = Project(name: "Project " + UUID().uuidString)
+            try store.append(project)
         } catch {
             fatalError(error.localizedDescription)
         }

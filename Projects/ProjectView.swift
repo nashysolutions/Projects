@@ -35,7 +35,10 @@ struct ProjectView: View {
                 })
         }
         .onAppear(perform: {
-            photos.fetchAndWait()
+//            photos.fetchAndWait()
+            Task {
+                await photos.fetch()
+            }
         })
         .navigationBarItems(trailing: button)
         .sheet(isPresented: $isPresented, content: {

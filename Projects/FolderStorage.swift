@@ -10,9 +10,9 @@ import Files
 
 struct FolderStorage {
     
-    static func loadRootFolder() throws -> Folder {
-        let folder = try applicationSupportDirectory()
-        return try folder.createSubfolderIfNeeded(withName: "Data")
+    static func loadRootFolder() -> Folder {
+        let folder = try! applicationSupportDirectory()
+        return try! folder.createSubfolderIfNeeded(withName: "Data")
     }
     
     private static func applicationSupportDirectory() throws -> Folder {

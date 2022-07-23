@@ -18,6 +18,7 @@
 		5084EC7E268787F0004F4EF1 /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5084EC7D268787F0004F4EF1 /* String+extensions.swift */; };
 		5084EC81268787F9004F4EF1 /* FolderStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5084EC7F268787F9004F4EF1 /* FolderStorage.swift */; };
 		5084EC82268787F9004F4EF1 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5084EC80268787F9004F4EF1 /* ProjectView.swift */; };
+		508C0EF5288BCB4F0097CFA4 /* Project+photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C0EF4288BCB4F0097CFA4 /* Project+photos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5084EC7D268787F0004F4EF1 /* String+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+extensions.swift"; sourceTree = "<group>"; };
 		5084EC7F268787F9004F4EF1 /* FolderStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderStorage.swift; sourceTree = "<group>"; };
 		5084EC80268787F9004F4EF1 /* ProjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
+		508C0EF4288BCB4F0097CFA4 /* Project+photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+photos.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +72,7 @@
 				50420103268780810000B39E /* ProjectsApp.swift */,
 				50420105268780810000B39E /* ContentView.swift */,
 				5084EC80268787F9004F4EF1 /* ProjectView.swift */,
-				50420113268780B80000B39E /* Project.swift */,
+				508C0EF6288BCB630097CFA4 /* Project */,
 				5084EC7F268787F9004F4EF1 /* FolderStorage.swift */,
 				5084EC7B268787DF004F4EF1 /* ImagePicker.swift */,
 				5084EC7D268787F0004F4EF1 /* String+extensions.swift */,
@@ -94,6 +96,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		508C0EF6288BCB630097CFA4 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				50420113268780B80000B39E /* Project.swift */,
+				508C0EF4288BCB4F0097CFA4 /* Project+photos.swift */,
+			);
+			path = Project;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 				50420114268780B80000B39E /* Project.swift in Sources */,
 				5084EC82268787F9004F4EF1 /* ProjectView.swift in Sources */,
 				5084EC7E268787F0004F4EF1 /* String+extensions.swift in Sources */,
+				508C0EF5288BCB4F0097CFA4 /* Project+photos.swift in Sources */,
 				5084EC81268787F9004F4EF1 /* FolderStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
