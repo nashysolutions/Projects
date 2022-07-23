@@ -1,34 +1,32 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Directory",
-        "repositoryURL": "https://github.com/nashysolutions/Directory.git",
-        "state": {
-          "branch": null,
-          "revision": "ae3b0cc274ea63222280b6b905b666d44fd830e5",
-          "version": "3.0.0"
-        }
-      },
-      {
-        "package": "Files",
-        "repositoryURL": "https://github.com/JohnSundell/Files",
-        "state": {
-          "branch": null,
-          "revision": "d273b5b7025d386feef79ef6bad7de762e106eaf",
-          "version": "4.2.0"
-        }
-      },
-      {
-        "package": "Stash",
-        "repositoryURL": "https://github.com/nashysolutions/Stash.git",
-        "state": {
-          "branch": null,
-          "revision": "7cad9b1fc03bc9aab12e4a1398a218f911a449d8",
-          "version": "1.0.0"
-        }
+  "pins" : [
+    {
+      "identity" : "cache",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nashysolutions/Cache.git",
+      "state" : {
+        "revision" : "e8a1bdfa7770e74037b3b06d5bde6f9a50a8ebf9",
+        "version" : "1.0.0"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "directory",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nashysolutions/Directory.git",
+      "state" : {
+        "revision" : "d3fefcbb8ffb26d35bf0ae7041dfcb52656e0bc8",
+        "version" : "4.0.1"
+      }
+    },
+    {
+      "identity" : "files",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/Files",
+      "state" : {
+        "revision" : "d273b5b7025d386feef79ef6bad7de762e106eaf",
+        "version" : "4.2.0"
+      }
+    }
+  ],
+  "version" : 2
 }
