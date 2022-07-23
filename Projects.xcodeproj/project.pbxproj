@@ -380,8 +380,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nashysolutions/Directory.git";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 3.0.0;
+				kind = exactVersion;
+				version = 4.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
