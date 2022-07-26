@@ -50,5 +50,10 @@ final class PhotoResolver<Item: DiskItem>: ObservableObject {
 //            AsyncImage(url: )
 //            However the above read() function caches for 1 minute, so
 //            you will need to handle a cache yourself if you use url.
+        
+//            Cache - The cache is completely reset once >50 images pass into your store.
+//            The cache will then continue to accumulate another 50.
+//            The images are kept in volatile memory and the footprint for this is ignored,
+//            so avoid storing raw images from the James Webb telescope.
     }
 }
