@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ProjectsView.swift
 //  Projects
 //
 //  Created by Robert Nash on 26/06/2021.
@@ -8,19 +8,18 @@
 import SwiftUI
 import Directory
 
-struct ContentView: View {
+struct ProjectsView: View {
+    
+    let person: Person
     
     @StateObject var store: Directory<Project>
     
     var body: some View {
         List {
-            ForEach(store.fetchedItems) { project in
+            ForEach(store.records) { project in
                 NavigationLink(
                     project.name,
-                    destination: ProjectView(
-                        name: project.name,
-                        photos: project.photos
-                    )
+                    destination: destination(project)
                 )
             }
             .onDelete(perform: delete)
@@ -29,8 +28,12 @@ struct ContentView: View {
         .navigationTitle("Projects")
         .navigationBarItems(trailing: button)
         .onAppear(perform: {
-            store.fetchAndWait()
+            try! store.loadAndWait()
         })
+    }
+    
+    private func destination(_ project: Project) -> some View {
+        ProjectView(name: project.name, store: project.photos)
     }
     
     func delete(at offsets: IndexSet) {
@@ -48,19 +51,22 @@ struct ContentView: View {
     }
     
     private func addProject() {
-        do {
-            let project = Project(name: "Project " + UUID().uuidString)
-            try store.append(project)
-        } catch {
-            fatalError(error.localizedDescription)
-        }
+        let project = Project(name: "Project " + UUID().uuidString, person: person)
+        try! store.append(project)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ProjectsView_Previews: PreviewProvider {
+    
+    static var person = Person(name: "Rob")
+    
+    static var store: Directory<Project> {
+        Directory<Project>(container: person)
+    }
+    
     static var previews: some View {
         NavigationView {
-            ContentView(store: try! Directory<Project>(isPreview: true))
+            ProjectsView(person: person, store: store)
         }
     }
 }

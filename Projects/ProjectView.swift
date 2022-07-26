@@ -15,7 +15,7 @@ struct ProjectView: View {
     let name: String
     @State private var error: String = "No Error found"
     
-    @StateObject var photos: PhotosDirectory<Project>
+    @StateObject var store: PhotosDirectory<Project>
     
     var body: some View {
         VStack {
@@ -24,9 +24,9 @@ struct ProjectView: View {
             LazyVGrid(
                 columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())],
                 content: {
-                    ForEach(photos.fetchedItems) { photo in
+                    ForEach(store.records) { photo in
                         Image(
-                            uiImage: photo.read()!
+                            uiImage: try! photo.read()!
                         )
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -35,9 +35,9 @@ struct ProjectView: View {
                 })
         }
         .onAppear(perform: {
-//            photos.fetchAndWait()
+//            photos.loadAndWait()
             Task {
-                await photos.fetch()
+                try! await store.load()
             }
         })
         .navigationBarItems(trailing: button)
@@ -45,7 +45,8 @@ struct ProjectView: View {
             ImagePicker() { image in
                 // we don't care too much about the tribulations of picking an image in this demo.
                 if let data = image?.pngData() {
-                    try! photos.insert(data)
+                    try! store.append(data: data)
+//                    try! store.insert(data)
                     self.error = "No Error found"
                 } else {
                     self.error = "There is a problem with that image. Please select another."
@@ -74,10 +75,15 @@ struct ProjectView: View {
 //    photos.insert(temps: temps)
 
 struct ProjectView_Previews: PreviewProvider{
+
+    static var person = Person(name: "Rob")
+    
+    static var project = Project(name: "Project 1", person: person)
+    
     static var previews: some View {
-        let project = try! Project(name: "Project 1")
+        
         return NavigationView {
-            ProjectView(name: project.name, photos: project.photos)
+            ProjectView(name: project.name, store: project.photos)
         }
     }
 }

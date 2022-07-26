@@ -11,6 +11,6 @@ import Directory
 extension Project: PhotoStore {
     
     var photos: PhotosDirectory<Project> {
-        try! PhotosDirectory<Project>(item: self)
+        try! PhotosDirectory<Project>(for: self)
     }
 }

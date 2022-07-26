@@ -7,31 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5013AC37288BE26500C14186 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5013AC36288BE26500C14186 /* Person.swift */; };
+		5013AC39288BE48200C14186 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5013AC38288BE48200C14186 /* PeopleView.swift */; };
 		50420104268780810000B39E /* ProjectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50420103268780810000B39E /* ProjectsApp.swift */; };
-		50420106268780810000B39E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50420105268780810000B39E /* ContentView.swift */; };
+		50420106268780810000B39E /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50420105268780810000B39E /* ProjectsView.swift */; };
 		50420108268780810000B39E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50420107268780810000B39E /* Assets.xcassets */; };
 		5042010B268780810000B39E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5042010A268780810000B39E /* Preview Assets.xcassets */; };
 		50420114268780B80000B39E /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50420113268780B80000B39E /* Project.swift */; };
 		50420117268780DF0000B39E /* Files in Frameworks */ = {isa = PBXBuildFile; productRef = 50420116268780DF0000B39E /* Files */; };
-		50526AAD26F9B458003476D6 /* Directory in Frameworks */ = {isa = PBXBuildFile; productRef = 50526AAC26F9B458003476D6 /* Directory */; };
+		50758E74288FDED500132C6D /* RootDir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50758E73288FDED500132C6D /* RootDir.swift */; };
 		5084EC7C268787DF004F4EF1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5084EC7B268787DF004F4EF1 /* ImagePicker.swift */; };
 		5084EC7E268787F0004F4EF1 /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5084EC7D268787F0004F4EF1 /* String+extensions.swift */; };
-		5084EC81268787F9004F4EF1 /* FolderStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5084EC7F268787F9004F4EF1 /* FolderStorage.swift */; };
 		5084EC82268787F9004F4EF1 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5084EC80268787F9004F4EF1 /* ProjectView.swift */; };
 		508C0EF5288BCB4F0097CFA4 /* Project+photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C0EF4288BCB4F0097CFA4 /* Project+photos.swift */; };
+		509E8DB5288FE640008134AC /* Directory in Frameworks */ = {isa = PBXBuildFile; productRef = 509E8DB4288FE640008134AC /* Directory */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5013AC36288BE26500C14186 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		5013AC38288BE48200C14186 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		50420100268780810000B39E /* Projects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50420103268780810000B39E /* ProjectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsApp.swift; sourceTree = "<group>"; };
-		50420105268780810000B39E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		50420105268780810000B39E /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		50420107268780810000B39E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5042010A268780810000B39E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5042010C268780810000B39E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50420113268780B80000B39E /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		50758E73288FDED500132C6D /* RootDir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDir.swift; sourceTree = "<group>"; };
 		5084EC7B268787DF004F4EF1 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5084EC7D268787F0004F4EF1 /* String+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+extensions.swift"; sourceTree = "<group>"; };
-		5084EC7F268787F9004F4EF1 /* FolderStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderStorage.swift; sourceTree = "<group>"; };
 		5084EC80268787F9004F4EF1 /* ProjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
 		508C0EF4288BCB4F0097CFA4 /* Project+photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+photos.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50526AAD26F9B458003476D6 /* Directory in Frameworks */,
+				509E8DB5288FE640008134AC /* Directory in Frameworks */,
 				50420117268780DF0000B39E /* Files in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,11 +73,14 @@
 		50420102268780810000B39E /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				50758E73288FDED500132C6D /* RootDir.swift */,
 				50420103268780810000B39E /* ProjectsApp.swift */,
-				50420105268780810000B39E /* ContentView.swift */,
+				5013AC38288BE48200C14186 /* PeopleView.swift */,
+				50420105268780810000B39E /* ProjectsView.swift */,
 				5084EC80268787F9004F4EF1 /* ProjectView.swift */,
-				508C0EF6288BCB630097CFA4 /* Project */,
-				5084EC7F268787F9004F4EF1 /* FolderStorage.swift */,
+				5013AC36288BE26500C14186 /* Person.swift */,
+				50420113268780B80000B39E /* Project.swift */,
+				508C0EF4288BCB4F0097CFA4 /* Project+photos.swift */,
 				5084EC7B268787DF004F4EF1 /* ImagePicker.swift */,
 				5084EC7D268787F0004F4EF1 /* String+extensions.swift */,
 				50420107268780810000B39E /* Assets.xcassets */,
@@ -98,15 +105,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		508C0EF6288BCB630097CFA4 /* Project */ = {
-			isa = PBXGroup;
-			children = (
-				50420113268780B80000B39E /* Project.swift */,
-				508C0EF4288BCB4F0097CFA4 /* Project+photos.swift */,
-			);
-			path = Project;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,7 +123,7 @@
 			name = Projects;
 			packageProductDependencies = (
 				50420116268780DF0000B39E /* Files */,
-				50526AAC26F9B458003476D6 /* Directory */,
+				509E8DB4288FE640008134AC /* Directory */,
 			);
 			productName = Projects;
 			productReference = 50420100268780810000B39E /* Projects.app */;
@@ -156,7 +154,7 @@
 			mainGroup = 504200F7268780810000B39E;
 			packageReferences = (
 				50420115268780DF0000B39E /* XCRemoteSwiftPackageReference "Files" */,
-				50526AAB26F9B458003476D6 /* XCRemoteSwiftPackageReference "Directory" */,
+				509E8DB3288FE640008134AC /* XCRemoteSwiftPackageReference "Directory" */,
 			);
 			productRefGroup = 50420101268780810000B39E /* Products */;
 			projectDirPath = "";
@@ -184,14 +182,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50420106268780810000B39E /* ContentView.swift in Sources */,
+				50420106268780810000B39E /* ProjectsView.swift in Sources */,
+				5013AC39288BE48200C14186 /* PeopleView.swift in Sources */,
 				5084EC7C268787DF004F4EF1 /* ImagePicker.swift in Sources */,
 				50420104268780810000B39E /* ProjectsApp.swift in Sources */,
 				50420114268780B80000B39E /* Project.swift in Sources */,
 				5084EC82268787F9004F4EF1 /* ProjectView.swift in Sources */,
 				5084EC7E268787F0004F4EF1 /* String+extensions.swift in Sources */,
+				50758E74288FDED500132C6D /* RootDir.swift in Sources */,
+				5013AC37288BE26500C14186 /* Person.swift in Sources */,
 				508C0EF5288BCB4F0097CFA4 /* Project+photos.swift in Sources */,
-				5084EC81268787F9004F4EF1 /* FolderStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,12 +388,12 @@
 				minimumVersion = 4.2.0;
 			};
 		};
-		50526AAB26F9B458003476D6 /* XCRemoteSwiftPackageReference "Directory" */ = {
+		509E8DB3288FE640008134AC /* XCRemoteSwiftPackageReference "Directory" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nashysolutions/Directory.git";
 			requirement = {
 				kind = exactVersion;
-				version = 4.0.1;
+				version = 5.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -404,9 +404,9 @@
 			package = 50420115268780DF0000B39E /* XCRemoteSwiftPackageReference "Files" */;
 			productName = Files;
 		};
-		50526AAC26F9B458003476D6 /* Directory */ = {
+		509E8DB4288FE640008134AC /* Directory */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 50526AAB26F9B458003476D6 /* XCRemoteSwiftPackageReference "Directory" */;
+			package = 509E8DB3288FE640008134AC /* XCRemoteSwiftPackageReference "Directory" */;
 			productName = Directory;
 		};
 /* End XCSwiftPackageProductDependency section */

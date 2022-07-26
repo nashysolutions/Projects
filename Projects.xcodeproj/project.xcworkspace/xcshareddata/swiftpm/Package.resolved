@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/nashysolutions/Cache.git",
       "state" : {
-        "revision" : "e8a1bdfa7770e74037b3b06d5bde6f9a50a8ebf9",
-        "version" : "1.0.0"
+        "revision" : "12b577aa115eeba4ec5a841e9f005709e01052ca",
+        "version" : "2.0.0"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/nashysolutions/Directory.git",
       "state" : {
-        "revision" : "d3fefcbb8ffb26d35bf0ae7041dfcb52656e0bc8",
-        "version" : "4.0.1"
+        "revision" : "c55f8a61b3feb9a9e349a9747569f43157c56bdb",
+        "version" : "5.0.0"
       }
     },
     {

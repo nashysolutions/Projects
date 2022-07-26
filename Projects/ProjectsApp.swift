@@ -14,16 +14,8 @@ struct ProjectsApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView(store: establishStore())
+                PeopleView(store: try! Directory<Person>())
             }
-        }
-    }
-    
-    private func establishStore() -> Directory<Project> {
-        do {
-            return try Directory<Project>()
-        } catch {
-            fatalError(error.localizedDescription)
         }
     }
 }
