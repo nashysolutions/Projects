@@ -9,7 +9,7 @@ import UIKit
 import Files
 import Directory
 
-struct Project: Hashable, Identifiable, SovereignContainer, Codable {
+struct Project: DirectoryItem {
     
     var id: Self { self }
     

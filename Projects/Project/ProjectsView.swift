@@ -33,7 +33,10 @@ struct ProjectsView: View {
     }
     
     private func destination(_ project: Project) -> some View {
-        ProjectView(name: project.name, store: project.photos)
+        ProjectView(
+            name: project.name,
+            store: project.photos
+        )
     }
     
     func delete(at offsets: IndexSet) {

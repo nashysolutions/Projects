@@ -22,38 +22,35 @@ struct ProjectView: View {
             Text(name)
             Text(error)
             LazyVGrid(
-                columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())],
+                columns: [GridItem(.fixed(200)), GridItem(.fixed(200))],
                 content: {
                     ForEach(store.records) { photo in
-                        Image(
-                            uiImage: try! photo.read()!
-                        )
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
+                        PhotoView(photo: photo)
+                            .frame(width: 200, height: 100)
                     }
                     .padding(.vertical)
                 })
         }
-        .onAppear(perform: {
-//            photos.loadAndWait()
-            Task {
-                try! await store.load()
-            }
-        })
+        .task {
+            try! await store.load()
+        }
         .navigationBarItems(trailing: button)
         .sheet(isPresented: $isPresented, content: {
-            ImagePicker() { image in
-                // we don't care too much about the tribulations of picking an image in this demo.
-                if let data = image?.pngData() {
-                    try! store.append(data: data)
-//                    try! store.insert(data)
-                    self.error = "No Error found"
-                } else {
-                    self.error = "There is a problem with that image. Please select another."
-                }
-                isPresented = false
-            }
+            picker
         })
+    }
+    
+    private var picker: some View {
+        ImagePicker() { image in
+            // we don't care too much about the tribulations of picking an image in this demo.
+            if let data = image?.pngData() {
+                try! store.append(data: data)
+                self.error = "No Error found"
+            } else {
+                self.error = "There is a problem with that image. Please select another."
+            }
+            isPresented = false
+        }
     }
     
     private var button: some View {

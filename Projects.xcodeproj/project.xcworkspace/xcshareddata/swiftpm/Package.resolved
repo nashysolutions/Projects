@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "asyncview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ralfebert/AsyncView.git",
+      "state" : {
+        "revision" : "62905b5289b766911c4d464517dce64b3b973100",
+        "version" : "0.5.1"
+      }
+    },
+    {
       "identity" : "cache",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/nashysolutions/Cache.git",

@@ -21,6 +21,13 @@
 		5084EC82268787F9004F4EF1 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5084EC80268787F9004F4EF1 /* ProjectView.swift */; };
 		508C0EF5288BCB4F0097CFA4 /* Project+photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C0EF4288BCB4F0097CFA4 /* Project+photos.swift */; };
 		509E8DB5288FE640008134AC /* Directory in Frameworks */ = {isa = PBXBuildFile; productRef = 509E8DB4288FE640008134AC /* Directory */; };
+		50EB5C9328903444008E55C8 /* AsyncView in Frameworks */ = {isa = PBXBuildFile; productRef = 50EB5C9228903444008E55C8 /* AsyncView */; };
+		50EB5C95289038FA008E55C8 /* DirectoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EB5C94289038FA008E55C8 /* DirectoryItem.swift */; };
+		50EB5C9728904686008E55C8 /* AsyncResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EB5C9628904686008E55C8 /* AsyncResult.swift */; };
+		50EB5C99289046CC008E55C8 /* DiskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EB5C98289046CC008E55C8 /* DiskItem.swift */; };
+		50EB5C9B289046DC008E55C8 /* PhotoResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EB5C9A289046DC008E55C8 /* PhotoResolver.swift */; };
+		50EB5C9D2890470B008E55C8 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EB5C9C2890470B008E55C8 /* PhotoView.swift */; };
+		50EB5CA02890479C008E55C8 /* UniqueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EB5C9F2890479C008E55C8 /* UniqueItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +45,12 @@
 		5084EC7D268787F0004F4EF1 /* String+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+extensions.swift"; sourceTree = "<group>"; };
 		5084EC80268787F9004F4EF1 /* ProjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
 		508C0EF4288BCB4F0097CFA4 /* Project+photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+photos.swift"; sourceTree = "<group>"; };
+		50EB5C94289038FA008E55C8 /* DirectoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryItem.swift; sourceTree = "<group>"; };
+		50EB5C9628904686008E55C8 /* AsyncResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncResult.swift; sourceTree = "<group>"; };
+		50EB5C98289046CC008E55C8 /* DiskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskItem.swift; sourceTree = "<group>"; };
+		50EB5C9A289046DC008E55C8 /* PhotoResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResolver.swift; sourceTree = "<group>"; };
+		50EB5C9C2890470B008E55C8 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		50EB5C9F2890479C008E55C8 /* UniqueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +60,7 @@
 			files = (
 				509E8DB5288FE640008134AC /* Directory in Frameworks */,
 				50420117268780DF0000B39E /* Files in Frameworks */,
+				50EB5C9328903444008E55C8 /* AsyncView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,16 +87,13 @@
 		50420102268780810000B39E /* Projects */ = {
 			isa = PBXGroup;
 			children = (
-				50758E73288FDED500132C6D /* RootDir.swift */,
 				50420103268780810000B39E /* ProjectsApp.swift */,
-				5013AC38288BE48200C14186 /* PeopleView.swift */,
-				50420105268780810000B39E /* ProjectsView.swift */,
-				5084EC80268787F9004F4EF1 /* ProjectView.swift */,
-				5013AC36288BE26500C14186 /* Person.swift */,
-				50420113268780B80000B39E /* Project.swift */,
-				508C0EF4288BCB4F0097CFA4 /* Project+photos.swift */,
+				50EB5CA3289047C4008E55C8 /* Person */,
+				50EB5CA2289047BD008E55C8 /* Project */,
 				5084EC7B268787DF004F4EF1 /* ImagePicker.swift */,
+				50EB5CA1289047AC008E55C8 /* Items */,
 				5084EC7D268787F0004F4EF1 /* String+extensions.swift */,
+				50EB5C9E2890477C008E55C8 /* AsyncPhotoView */,
 				50420107268780810000B39E /* Assets.xcassets */,
 				5042010C268780810000B39E /* Info.plist */,
 				50420109268780810000B39E /* Preview Content */,
@@ -105,6 +116,47 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		50EB5C9E2890477C008E55C8 /* AsyncPhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				50EB5C9C2890470B008E55C8 /* PhotoView.swift */,
+				50EB5C9628904686008E55C8 /* AsyncResult.swift */,
+				50EB5C9A289046DC008E55C8 /* PhotoResolver.swift */,
+			);
+			path = AsyncPhotoView;
+			sourceTree = "<group>";
+		};
+		50EB5CA1289047AC008E55C8 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				50EB5C94289038FA008E55C8 /* DirectoryItem.swift */,
+				50EB5C98289046CC008E55C8 /* DiskItem.swift */,
+				50EB5C9F2890479C008E55C8 /* UniqueItem.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		50EB5CA2289047BD008E55C8 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				50420105268780810000B39E /* ProjectsView.swift */,
+				5084EC80268787F9004F4EF1 /* ProjectView.swift */,
+				50420113268780B80000B39E /* Project.swift */,
+				508C0EF4288BCB4F0097CFA4 /* Project+photos.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		50EB5CA3289047C4008E55C8 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				5013AC36288BE26500C14186 /* Person.swift */,
+				50758E73288FDED500132C6D /* RootDir.swift */,
+				5013AC38288BE48200C14186 /* PeopleView.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,6 +176,7 @@
 			packageProductDependencies = (
 				50420116268780DF0000B39E /* Files */,
 				509E8DB4288FE640008134AC /* Directory */,
+				50EB5C9228903444008E55C8 /* AsyncView */,
 			);
 			productName = Projects;
 			productReference = 50420100268780810000B39E /* Projects.app */;
@@ -155,6 +208,7 @@
 			packageReferences = (
 				50420115268780DF0000B39E /* XCRemoteSwiftPackageReference "Files" */,
 				509E8DB3288FE640008134AC /* XCRemoteSwiftPackageReference "Directory" */,
+				50EB5C9128903444008E55C8 /* XCRemoteSwiftPackageReference "AsyncView" */,
 			);
 			productRefGroup = 50420101268780810000B39E /* Products */;
 			projectDirPath = "";
@@ -183,12 +237,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				50420106268780810000B39E /* ProjectsView.swift in Sources */,
+				50EB5CA02890479C008E55C8 /* UniqueItem.swift in Sources */,
+				50EB5C9728904686008E55C8 /* AsyncResult.swift in Sources */,
 				5013AC39288BE48200C14186 /* PeopleView.swift in Sources */,
+				50EB5C9D2890470B008E55C8 /* PhotoView.swift in Sources */,
 				5084EC7C268787DF004F4EF1 /* ImagePicker.swift in Sources */,
 				50420104268780810000B39E /* ProjectsApp.swift in Sources */,
 				50420114268780B80000B39E /* Project.swift in Sources */,
+				50EB5C9B289046DC008E55C8 /* PhotoResolver.swift in Sources */,
+				50EB5C95289038FA008E55C8 /* DirectoryItem.swift in Sources */,
 				5084EC82268787F9004F4EF1 /* ProjectView.swift in Sources */,
 				5084EC7E268787F0004F4EF1 /* String+extensions.swift in Sources */,
+				50EB5C99289046CC008E55C8 /* DiskItem.swift in Sources */,
 				50758E74288FDED500132C6D /* RootDir.swift in Sources */,
 				5013AC37288BE26500C14186 /* Person.swift in Sources */,
 				508C0EF5288BCB4F0097CFA4 /* Project+photos.swift in Sources */,
@@ -323,7 +383,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Projects/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Projects/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,7 +404,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Projects/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Projects/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,6 +456,14 @@
 				version = 5.0.0;
 			};
 		};
+		50EB5C9128903444008E55C8 /* XCRemoteSwiftPackageReference "AsyncView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ralfebert/AsyncView.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.5.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -408,6 +476,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 509E8DB3288FE640008134AC /* XCRemoteSwiftPackageReference "Directory" */;
 			productName = Directory;
+		};
+		50EB5C9228903444008E55C8 /* AsyncView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50EB5C9128903444008E55C8 /* XCRemoteSwiftPackageReference "AsyncView" */;
+			productName = AsyncView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

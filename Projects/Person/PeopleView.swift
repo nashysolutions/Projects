@@ -41,7 +41,10 @@ struct PeopleView: View {
     }
     
     private func destination(_ person: Person) -> some View {
-        ProjectsView(person: person, store: Directory<Project>(container: person))
+        ProjectsView(
+            person: person,
+            store: Directory<Project>(container: person)
+        )
     }
     
     private func addPerson() {
