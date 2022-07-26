@@ -38,6 +38,10 @@ final class PhotoResolver<Item: DiskItem>: ObservableObject {
                 result = .success(image)
             }
         } catch {
+            // the file may be missing, especially if you are using tmp dir in swiftui previews
+            // or the decoder might fail because the data no longer corresponds with your value type, especially
+            // if you are actively developing your model
+            // so you may want to respond with delete action at call site
             result = .failure(error)
         }
         
