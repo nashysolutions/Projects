@@ -44,6 +44,5 @@ extension Directory where Item == Person {
 
 private func personsFolder() -> Folder {
     let root = Person.root.folder
-    let folder = try! root.createSubfolderIfNeeded(withName: "Data")
-    return try! folder.createSubfolderIfNeeded(withName: "Persons")
+    return try! root.createSubfolderIfNeeded(withName: "Persons")
 }
